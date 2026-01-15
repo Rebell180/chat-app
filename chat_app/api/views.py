@@ -1,11 +1,13 @@
-import json
-from django.shortcuts import render
 from django.http import JsonResponse
 from django.views import View
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
+import json
 
 from chat_app.models import Chat
 
 # Create your views here.
+@method_decorator(csrf_exempt, name='dispatch')
 class ChatView(View):
     def get(self, request):
         chats = Chat.objects.all().order_by('-createdAt')

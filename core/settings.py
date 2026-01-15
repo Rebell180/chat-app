@@ -50,18 +50,18 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware';
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     # Wenn Probleme auftreten
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://127.0.0.1:5500',
-    'http://localhost:5500',
+    'http://127.0.0.1:4200',
+    'http://localhost:4200',
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://127.0.0.1:5500',
-    'http://localhost:5500',
+    'http://127.0.0.1:4200',
+    'http://localhost:4200',
 ]
 
 ROOT_URLCONF = 'core.urls'
