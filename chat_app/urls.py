@@ -1,6 +1,6 @@
-from django.urls import path
-from .views import landing_page_view
+from django.urls import path, include
+from .api import views
 
 urlpatterns = [
-    path('', landing_page_view),
+    path('api/', include("api.urls")),
 ]
